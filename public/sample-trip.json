@@ -1,0 +1,505 @@
+{
+  "schema_version": "11.0",
+  "trip": {
+    "id": "ejemplo-lisboa",
+    "name": "Viaje de ejemplo: Lisboa",
+    "start_date": "2027-03-10",
+    "end_date": "2027-03-11",
+    "source_file": "sample"
+  },
+  "travelers": [
+    {
+      "id": "ana",
+      "name": "Ana",
+      "device": "ios"
+    },
+    {
+      "id": "luis",
+      "name": "Luis",
+      "device": "android"
+    }
+  ],
+  "days": [
+    {
+      "date": "2027-03-10",
+      "weekday": "miércoles",
+      "day_number": 0,
+      "area": "Madrid → Lisboa",
+      "summary": "Vuelo y primera tarde",
+      "travelers": [
+        "ana",
+        "luis"
+      ],
+      "events": [
+        {
+          "id": "2cbbaab6-ba09-52fd-819f-380f37c75cfa",
+          "legacy_id": "d1-1",
+          "type": "flight",
+          "title": "Vuelo XX0123 Madrid → Lisboa",
+          "description": "Vuelo de ejemplo (datos ficticios).",
+          "details": [],
+          "tips": [
+            "Llegar 2 h antes"
+          ],
+          "cost": null,
+          "booking": {
+            "required": true,
+            "confirmed": true,
+            "confirmation_code": "ABC123",
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/Madrid",
+          "start_utc": "2027-03-10T08:00:00Z",
+          "end_utc": "2027-03-10T09:20:00Z",
+          "location": {
+            "name": "Madrid-Barajas T4",
+            "lat": 40.4915,
+            "lng": -3.5935,
+            "country": "ES",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=40.4915,-3.5935"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null,
+            "flight": {
+              "provider": "aerodatabox",
+              "fallback": "flightaware",
+              "position": "opensky",
+              "web_links": {
+                "flightradar24": "https://www.flightradar24.com/data/flights/xx123",
+                "flightaware": "https://www.flightaware.com/live/flight/XX123"
+              }
+            }
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ],
+          "flight": {
+            "number": "XX0123",
+            "iata": "XX123",
+            "airline": "Aerolínea Ejemplo",
+            "date": "2027-03-10",
+            "dep_iata": "MAD",
+            "arr_iata": "LIS",
+            "dep_terminal": "4",
+            "arr_terminal": "1"
+          },
+          "end_timezone": "Europe/Lisbon"
+        },
+        {
+          "id": "b8cb324a-c596-578a-98a0-e86501586e0e",
+          "legacy_id": "d1-2",
+          "type": "transport",
+          "title": "Metro al centro (línea roja + verde)",
+          "description": "Tarjeta Viva Viagem.",
+          "details": [],
+          "tips": [],
+          "cost": {
+            "min": 1.85,
+            "max": 1.85,
+            "currency": "EUR",
+            "per": "person"
+          },
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/Lisbon",
+          "start_utc": "2027-03-10T10:00:00Z",
+          "end_utc": "2027-03-10T10:40:00Z",
+          "location": {
+            "name": "Aeropuerto de Lisboa (LIS)",
+            "lat": 38.7742,
+            "lng": -9.1342,
+            "country": "PT",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=38.7742,-9.1342"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        },
+        {
+          "id": "8bf4fb96-567b-5dea-8763-837b52321a3f",
+          "legacy_id": "d1-3",
+          "type": "lodging",
+          "title": "Check-in Hotel Ejemplo",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/Lisbon",
+          "start_utc": "2027-03-10T14:00:00Z",
+          "end_utc": null,
+          "location": {
+            "name": "Hotel Ejemplo Baixa",
+            "lat": 38.71,
+            "lng": -9.1366,
+            "country": "PT",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=38.71,-9.1366"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ],
+          "lodging_id": "hotel-ejemplo"
+        },
+        {
+          "id": "cdd05603-216e-5aee-84cb-be0a4caff64c",
+          "legacy_id": "d1-4",
+          "type": "sight",
+          "title": "Tranvía 28 y Alfama",
+          "description": "Recorrido por el barrio histórico.",
+          "details": [],
+          "tips": [
+            "Subir temprano para evitar filas"
+          ],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/Lisbon",
+          "start_utc": "2027-03-10T15:00:00Z",
+          "end_utc": "2027-03-10T17:30:00Z",
+          "location": {
+            "name": "Alfama",
+            "lat": 38.7115,
+            "lng": -9.13,
+            "country": "PT",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=38.7115,-9.13"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        },
+        {
+          "id": "00b4b13e-e450-5689-bf10-4284d4e9d0ef",
+          "legacy_id": "d1-5",
+          "type": "food",
+          "title": "Cena con fado",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": {
+            "min": 25,
+            "max": 40,
+            "currency": "EUR",
+            "per": "person"
+          },
+          "booking": {
+            "required": true,
+            "confirmed": false,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/Lisbon",
+          "start_utc": "2027-03-10T20:00:00Z",
+          "end_utc": null,
+          "location": {
+            "name": "Alfama",
+            "lat": 38.7115,
+            "lng": -9.13,
+            "country": "PT",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=38.7115,-9.13"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2027-03-11",
+      "weekday": "jueves",
+      "day_number": 1,
+      "area": "Sintra",
+      "summary": "Excursión de un día",
+      "travelers": [
+        "ana",
+        "luis"
+      ],
+      "warnings": [
+        "Ejemplo de advertencia del día"
+      ],
+      "events": [
+        {
+          "id": "55aa4988-95a1-58ff-9d3c-e258679bcb71",
+          "legacy_id": "d2-1",
+          "type": "transport",
+          "title": "Tren Rossio → Sintra",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/Lisbon",
+          "start_utc": "2027-03-11T08:30:00Z",
+          "end_utc": "2027-03-11T09:10:00Z",
+          "location": {
+            "name": "Estación Rossio",
+            "lat": 38.7142,
+            "lng": -9.141,
+            "country": "PT",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=38.7142,-9.141"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        },
+        {
+          "id": "7a7396d5-9f06-56d9-893b-b188f897fe75",
+          "legacy_id": "d2-2",
+          "type": "sight",
+          "title": "Palacio da Pena",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/Lisbon",
+          "start_utc": "2027-03-11T09:45:00Z",
+          "end_utc": "2027-03-11T12:00:00Z",
+          "location": {
+            "name": "Palacio da Pena",
+            "lat": 38.7876,
+            "lng": -9.3906,
+            "country": "PT",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=38.7876,-9.3906"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        },
+        {
+          "id": "0582af75-7bea-595f-8379-996ec75edce0",
+          "legacy_id": "d2-3",
+          "type": "sight",
+          "title": "Plan B: Quinta da Regaleira",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "alternative",
+          "timezone": "Europe/Lisbon",
+          "start_utc": "2027-03-11T09:45:00Z",
+          "end_utc": null,
+          "location": {
+            "name": "Quinta da Regaleira",
+            "lat": 38.7963,
+            "lng": -9.3961,
+            "country": "PT",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=38.7963,-9.3961"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        }
+      ]
+    }
+  ],
+  "lodging": [
+    {
+      "id": "hotel-ejemplo",
+      "name": "Hotel Ejemplo Baixa",
+      "address": "Rua Augusta 1, 1100-048 Lisboa, Portugal",
+      "lat": 38.71,
+      "lng": -9.1366,
+      "country": "PT",
+      "check_in": "2027-03-10",
+      "check_out": "2027-03-11",
+      "nights": 1,
+      "paid": true,
+      "travelers": [
+        "ana",
+        "luis"
+      ],
+      "notes": "Ejemplo",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=38.71,-9.1366",
+      "booking": {
+        "confirmed": true,
+        "confirmation_code": null,
+        "url": null
+      }
+    }
+  ],
+  "reminders": [
+    {
+      "id": "2f06e203-756e-523f-a83c-13b7177856eb",
+      "title": "Hacer check-in online",
+      "trigger_utc": "2027-03-09T08:00:00Z",
+      "timezone": "Europe/Madrid",
+      "event_id": "2cbbaab6-ba09-52fd-819f-380f37c75cfa",
+      "message": "Ejemplo de recordatorio.",
+      "done": false
+    }
+  ],
+  "checklists": [
+    {
+      "id": "a27b02af-1915-5023-a728-bacfa9b1275e",
+      "title": "Antes de salir",
+      "event_id": "2cbbaab6-ba09-52fd-819f-380f37c75cfa",
+      "items": [
+        {
+          "id": "c6e2c4be-1e32-5402-8f63-b6d3532fdef4",
+          "text": "Pasaporte",
+          "done": false,
+          "category": "documentos"
+        },
+        {
+          "id": "f823f5d4-286e-53e0-9106-11abea865668",
+          "text": "Cargador",
+          "done": true,
+          "category": "electronica"
+        }
+      ]
+    }
+  ]
+}
