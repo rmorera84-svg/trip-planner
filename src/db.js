@@ -24,6 +24,17 @@ export const getItem = key => run('readonly', s => s.get(key))
 export const setItem = (key, value) => run('readwrite', s => s.put(value, key))
 export const removeItem = key => run('readwrite', s => s.delete(key))
 
+export const clearCache = () => run('readwrite', s => {
+  const req = s.openCursor()
+  req.onsuccess = () => {
+    const c = req.result
+    if (!c) return
+    if (String(c.key).startsWith('cache:')) c.delete()
+    c.continue()
+  }
+  return req
+})
+
 // Pide al navegador que no borre los datos (importante en iPhone).
 export async function requestPersistence() {
   try {

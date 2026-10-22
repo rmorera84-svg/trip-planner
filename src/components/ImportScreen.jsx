@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { validateTrip } from '../trip.js'
+import Icon from '../icons.jsx'
 
 export default function ImportScreen({ onImport, compact = false }) {
   const [error, setError] = useState(null)
-
   const handle = async text => {
     try {
       const t = JSON.parse(text)
@@ -26,14 +26,14 @@ export default function ImportScreen({ onImport, compact = false }) {
   }
 
   return (
-    <div className={compact ? '' : 'center-page'}>
+    <div className={compact ? '' : 'welcome'}>
       {!compact && <>
-        <div className="logo">🗺️</div>
+        <div className="welcome-logo"><Icon name="plane" size={44} /></div>
         <h1>Trip Planner</h1>
-        <p className="muted">Tus datos se guardan solo en este teléfono.</p>
+        <p className="muted">Tu itinerario, offline y con datos en vivo.<br />Los datos se guardan solo en este teléfono.</p>
       </>}
       <label className="btn primary block">
-        📂 Importar itinerario (.json)
+        <Icon name="upload" size={18} /> Importar itinerario (.json)
         <input type="file" accept="application/json,.json" onChange={onFile} hidden />
       </label>
       {!compact && <button className="btn block" onClick={loadSample}>Ver viaje de ejemplo</button>}

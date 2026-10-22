@@ -1,10 +1,10 @@
 {
-  "schema_version": "11.0",
+  "schema_version": "12.0",
   "trip": {
-    "id": "ejemplo-lisboa",
-    "name": "Viaje de ejemplo: Lisboa",
-    "start_date": "2027-03-10",
-    "end_date": "2027-03-11",
+    "id": "ejemplo",
+    "name": "Viaje de ejemplo",
+    "start_date": "2027-03-08",
+    "end_date": "2027-03-10",
     "source_file": "sample"
   },
   "travelers": [
@@ -21,21 +21,18 @@
   ],
   "days": [
     {
-      "date": "2027-03-10",
-      "weekday": "miércoles",
-      "day_number": 0,
-      "area": "Madrid → Lisboa",
-      "summary": "Vuelo y primera tarde",
+      "date": "2027-03-08",
+      "area": "Madrid → Londres",
+      "summary": "Vuelo y llegada",
       "travelers": [
         "ana",
         "luis"
       ],
       "events": [
         {
-          "id": "2cbbaab6-ba09-52fd-819f-380f37c75cfa",
-          "legacy_id": "d1-1",
+          "id": "7e009c69-455d-5117-9d8a-b7c75f9c72e0",
           "type": "flight",
-          "title": "Vuelo XX0123 Madrid → Lisboa",
+          "title": "Vuelo XX0123 Madrid → Londres",
           "description": "Vuelo de ejemplo (datos ficticios).",
           "details": [],
           "tips": [
@@ -50,15 +47,15 @@
           },
           "status": "planned",
           "timezone": "Europe/Madrid",
-          "start_utc": "2027-03-10T08:00:00Z",
-          "end_utc": "2027-03-10T09:20:00Z",
+          "start_utc": "2027-03-08T12:25:00Z",
+          "end_utc": "2027-03-08T14:55:00Z",
           "location": {
-            "name": "Madrid-Barajas T4",
-            "lat": 40.4915,
-            "lng": -3.5935,
+            "name": "Madrid-Barajas T4S",
+            "lat": 40.4999,
+            "lng": -3.5933,
             "country": "ES",
             "coords_source": "manual_approx",
-            "maps_url": "https://www.google.com/maps/search/?api=1&query=40.4915,-3.5935"
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=40.4999,-3.5933"
           },
           "live": {
             "weather": {
@@ -68,8 +65,6 @@
             "data": null,
             "flight": {
               "provider": "aerodatabox",
-              "fallback": "flightaware",
-              "position": "opensky",
               "web_links": {
                 "flightradar24": "https://www.flightradar24.com/data/flights/xx123",
                 "flightaware": "https://www.flightaware.com/live/flight/XX123"
@@ -90,28 +85,22 @@
             "number": "XX0123",
             "iata": "XX123",
             "airline": "Aerolínea Ejemplo",
-            "date": "2027-03-10",
+            "date": "2027-03-08",
             "dep_iata": "MAD",
-            "arr_iata": "LIS",
-            "dep_terminal": "4",
-            "arr_terminal": "1"
+            "arr_iata": "LHR",
+            "dep_terminal": "4S",
+            "arr_terminal": "5"
           },
-          "end_timezone": "Europe/Lisbon"
+          "end_timezone": "Europe/London"
         },
         {
-          "id": "b8cb324a-c596-578a-98a0-e86501586e0e",
-          "legacy_id": "d1-2",
-          "type": "transport",
-          "title": "Metro al centro (línea roja + verde)",
-          "description": "Tarjeta Viva Viagem.",
+          "id": "92984703-ee50-577c-83a9-89c55db5087c",
+          "type": "lodging",
+          "title": "Check-in Hotel Ejemplo Euston",
+          "description": "",
           "details": [],
           "tips": [],
-          "cost": {
-            "min": 1.85,
-            "max": 1.85,
-            "currency": "EUR",
-            "per": "person"
-          },
+          "cost": null,
           "booking": {
             "required": null,
             "confirmed": null,
@@ -119,16 +108,127 @@
             "url": null
           },
           "status": "planned",
-          "timezone": "Europe/Lisbon",
-          "start_utc": "2027-03-10T10:00:00Z",
-          "end_utc": "2027-03-10T10:40:00Z",
+          "timezone": "Europe/London",
+          "start_utc": "2027-03-08T17:00:00Z",
+          "end_utc": null,
           "location": {
-            "name": "Aeropuerto de Lisboa (LIS)",
-            "lat": 38.7742,
-            "lng": -9.1342,
-            "country": "PT",
+            "name": "Hotel Ejemplo, Euston",
+            "lat": 51.5263,
+            "lng": -0.13,
+            "country": "GB",
             "coords_source": "manual_approx",
-            "maps_url": "https://www.google.com/maps/search/?api=1&query=38.7742,-9.1342"
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=51.5263,-0.13"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ],
+          "lodging_id": "hotel-ej"
+        }
+      ]
+    },
+    {
+      "date": "2027-03-09",
+      "area": "Londres",
+      "summary": "Westminster y el río",
+      "travelers": [
+        "ana",
+        "luis"
+      ],
+      "events": [
+        {
+          "id": "2cbbaab6-ba09-52fd-819f-380f37c75cfa",
+          "type": "transport",
+          "title": "Metro Euston → Westminster",
+          "description": "Victoria Line y Jubilee Line.",
+          "details": [],
+          "tips": [],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/London",
+          "start_utc": "2027-03-09T08:00:00Z",
+          "end_utc": "2027-03-09T08:30:00Z",
+          "location": {
+            "name": "Euston → Westminster",
+            "lat": 51.5282,
+            "lng": -0.1337,
+            "country": "GB",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=51.5282,-0.1337"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null,
+            "transit": {
+              "provider": "tfl",
+              "from": "940GZZLUEUS",
+              "to": "940GZZLUWSM",
+              "lines": [
+                "victoria",
+                "jubilee"
+              ]
+            }
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        },
+        {
+          "id": "b8cb324a-c596-578a-98a0-e86501586e0e",
+          "type": "sight",
+          "title": "Big Ben y Abadía de Westminster",
+          "description": "Exteriores.",
+          "details": [],
+          "tips": [
+            "Foto desde la mitad del puente"
+          ],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/London",
+          "start_utc": "2027-03-09T08:30:00Z",
+          "end_utc": "2027-03-09T10:15:00Z",
+          "location": {
+            "name": "Westminster Abbey / Big Ben",
+            "lat": 51.5,
+            "lng": -0.125,
+            "country": "GB",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=51.5,-0.125"
           },
           "live": {
             "weather": {
@@ -150,9 +250,8 @@
         },
         {
           "id": "8bf4fb96-567b-5dea-8763-837b52321a3f",
-          "legacy_id": "d1-3",
-          "type": "lodging",
-          "title": "Check-in Hotel Ejemplo",
+          "type": "sight",
+          "title": "Cambio de Guardia",
           "description": "",
           "details": [],
           "tips": [],
@@ -164,64 +263,16 @@
             "url": null
           },
           "status": "planned",
-          "timezone": "Europe/Lisbon",
-          "start_utc": "2027-03-10T14:00:00Z",
-          "end_utc": null,
+          "timezone": "Europe/London",
+          "start_utc": "2027-03-09T11:00:00Z",
+          "end_utc": "2027-03-09T11:45:00Z",
           "location": {
-            "name": "Hotel Ejemplo Baixa",
-            "lat": 38.71,
-            "lng": -9.1366,
-            "country": "PT",
+            "name": "Buckingham Palace",
+            "lat": 51.5014,
+            "lng": -0.1419,
+            "country": "GB",
             "coords_source": "manual_approx",
-            "maps_url": "https://www.google.com/maps/search/?api=1&query=38.71,-9.1366"
-          },
-          "live": {
-            "weather": {
-              "provider": "open-meteo"
-            },
-            "last_updated_utc": null,
-            "data": null
-          },
-          "version": 1,
-          "created_at": "2026-10-21T00:00:00Z",
-          "updated_at": "2026-10-21T00:00:00Z",
-          "updated_by": "ana",
-          "deleted": false,
-          "source": "plan",
-          "travelers": [
-            "ana",
-            "luis"
-          ],
-          "lodging_id": "hotel-ejemplo"
-        },
-        {
-          "id": "cdd05603-216e-5aee-84cb-be0a4caff64c",
-          "legacy_id": "d1-4",
-          "type": "sight",
-          "title": "Tranvía 28 y Alfama",
-          "description": "Recorrido por el barrio histórico.",
-          "details": [],
-          "tips": [
-            "Subir temprano para evitar filas"
-          ],
-          "cost": null,
-          "booking": {
-            "required": null,
-            "confirmed": null,
-            "confirmation_code": null,
-            "url": null
-          },
-          "status": "planned",
-          "timezone": "Europe/Lisbon",
-          "start_utc": "2027-03-10T15:00:00Z",
-          "end_utc": "2027-03-10T17:30:00Z",
-          "location": {
-            "name": "Alfama",
-            "lat": 38.7115,
-            "lng": -9.13,
-            "country": "PT",
-            "coords_source": "manual_approx",
-            "maps_url": "https://www.google.com/maps/search/?api=1&query=38.7115,-9.13"
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=51.5014,-0.1419"
           },
           "live": {
             "weather": {
@@ -242,36 +293,132 @@
           ]
         },
         {
-          "id": "00b4b13e-e450-5689-bf10-4284d4e9d0ef",
-          "legacy_id": "d1-5",
-          "type": "food",
-          "title": "Cena con fado",
+          "id": "cdd05603-216e-5aee-84cb-be0a4caff64c",
+          "type": "transport",
+          "title": "Metro London Bridge → Piccadilly Circus",
           "description": "",
           "details": [],
           "tips": [],
-          "cost": {
-            "min": 25,
-            "max": 40,
-            "currency": "EUR",
-            "per": "person"
-          },
+          "cost": null,
           "booking": {
-            "required": true,
-            "confirmed": false,
+            "required": null,
+            "confirmed": null,
             "confirmation_code": null,
             "url": null
           },
           "status": "planned",
-          "timezone": "Europe/Lisbon",
-          "start_utc": "2027-03-10T20:00:00Z",
+          "timezone": "Europe/London",
+          "start_utc": "2027-03-09T14:15:00Z",
+          "end_utc": "2027-03-09T14:45:00Z",
+          "location": {
+            "name": "London Bridge",
+            "lat": 51.505,
+            "lng": -0.086,
+            "country": "GB",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=51.505,-0.086"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null,
+            "transit": {
+              "provider": "tfl",
+              "from": "940GZZLULNB",
+              "to": "940GZZLUPCC",
+              "lines": [
+                "jubilee",
+                "piccadilly"
+              ]
+            }
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        },
+        {
+          "id": "00b4b13e-e450-5689-bf10-4284d4e9d0ef",
+          "type": "food",
+          "title": "Cena en Chinatown",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": {
+            "min": 12,
+            "max": 15,
+            "currency": "GBP",
+            "per": "person"
+          },
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/London",
+          "start_utc": "2027-03-09T19:15:00Z",
           "end_utc": null,
           "location": {
-            "name": "Alfama",
-            "lat": 38.7115,
-            "lng": -9.13,
-            "country": "PT",
+            "name": "Chinatown London",
+            "lat": 51.5113,
+            "lng": -0.131,
+            "country": "GB",
             "coords_source": "manual_approx",
-            "maps_url": "https://www.google.com/maps/search/?api=1&query=38.7115,-9.13"
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=51.5113,-0.131"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        },
+        {
+          "id": "d6863ac9-4599-5d40-af0f-0ecdba3cfee5",
+          "type": "food",
+          "title": "Plan B: pub en Covent Garden",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "alternative",
+          "timezone": "Europe/London",
+          "start_utc": "2027-03-09T19:15:00Z",
+          "end_utc": null,
+          "location": {
+            "name": "Covent Garden",
+            "lat": 51.5117,
+            "lng": -0.124,
+            "country": "GB",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=51.5117,-0.124"
           },
           "live": {
             "weather": {
@@ -294,11 +441,9 @@
       ]
     },
     {
-      "date": "2027-03-11",
-      "weekday": "jueves",
-      "day_number": 1,
-      "area": "Sintra",
-      "summary": "Excursión de un día",
+      "date": "2027-03-10",
+      "area": "Salzburgo",
+      "summary": "Road trip y mercado",
       "travelers": [
         "ana",
         "luis"
@@ -309,9 +454,8 @@
       "events": [
         {
           "id": "55aa4988-95a1-58ff-9d3c-e258679bcb71",
-          "legacy_id": "d2-1",
           "type": "transport",
-          "title": "Tren Rossio → Sintra",
+          "title": "Manejo hacia Salzburgo",
           "description": "",
           "details": [],
           "tips": [],
@@ -323,23 +467,26 @@
             "url": null
           },
           "status": "planned",
-          "timezone": "Europe/Lisbon",
-          "start_utc": "2027-03-11T08:30:00Z",
-          "end_utc": "2027-03-11T09:10:00Z",
+          "timezone": "Europe/Vienna",
+          "start_utc": "2027-03-10T08:00:00Z",
+          "end_utc": "2027-03-10T09:30:00Z",
           "location": {
-            "name": "Estación Rossio",
-            "lat": 38.7142,
-            "lng": -9.141,
-            "country": "PT",
+            "name": "A8 → Salzburgo",
+            "lat": 47.798,
+            "lng": 13.042,
+            "country": "AT",
             "coords_source": "manual_approx",
-            "maps_url": "https://www.google.com/maps/search/?api=1&query=38.7142,-9.141"
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=47.798,13.042"
           },
           "live": {
             "weather": {
               "provider": "open-meteo"
             },
             "last_updated_utc": null,
-            "data": null
+            "data": null,
+            "driving": {
+              "provider": "maps_link"
+            }
           },
           "version": 1,
           "created_at": "2026-10-21T00:00:00Z",
@@ -354,9 +501,8 @@
         },
         {
           "id": "7a7396d5-9f06-56d9-893b-b188f897fe75",
-          "legacy_id": "d2-2",
           "type": "sight",
-          "title": "Palacio da Pena",
+          "title": "Fortaleza Hohensalzburg",
           "description": "",
           "details": [],
           "tips": [],
@@ -368,16 +514,16 @@
             "url": null
           },
           "status": "planned",
-          "timezone": "Europe/Lisbon",
-          "start_utc": "2027-03-11T09:45:00Z",
-          "end_utc": "2027-03-11T12:00:00Z",
+          "timezone": "Europe/Vienna",
+          "start_utc": "2027-03-10T10:00:00Z",
+          "end_utc": "2027-03-10T12:00:00Z",
           "location": {
-            "name": "Palacio da Pena",
-            "lat": 38.7876,
-            "lng": -9.3906,
-            "country": "PT",
+            "name": "Festung Hohensalzburg",
+            "lat": 47.795,
+            "lng": 13.0477,
+            "country": "AT",
             "coords_source": "manual_approx",
-            "maps_url": "https://www.google.com/maps/search/?api=1&query=38.7876,-9.3906"
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=47.795,13.0477"
           },
           "live": {
             "weather": {
@@ -399,30 +545,29 @@
         },
         {
           "id": "0582af75-7bea-595f-8379-996ec75edce0",
-          "legacy_id": "d2-3",
-          "type": "sight",
-          "title": "Plan B: Quinta da Regaleira",
+          "type": "food",
+          "title": "Almuerzo en Bärenwirt",
           "description": "",
           "details": [],
           "tips": [],
           "cost": null,
           "booking": {
-            "required": null,
-            "confirmed": null,
+            "required": true,
+            "confirmed": false,
             "confirmation_code": null,
             "url": null
           },
-          "status": "alternative",
-          "timezone": "Europe/Lisbon",
-          "start_utc": "2027-03-11T09:45:00Z",
-          "end_utc": null,
+          "status": "planned",
+          "timezone": "Europe/Vienna",
+          "start_utc": "2027-03-10T12:30:00Z",
+          "end_utc": "2027-03-10T13:45:00Z",
           "location": {
-            "name": "Quinta da Regaleira",
-            "lat": 38.7963,
-            "lng": -9.3961,
-            "country": "PT",
+            "name": "Bärenwirt",
+            "lat": 47.808,
+            "lng": 13.035,
+            "country": "AT",
             "coords_source": "manual_approx",
-            "maps_url": "https://www.google.com/maps/search/?api=1&query=38.7963,-9.3961"
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=47.808,13.035"
           },
           "live": {
             "weather": {
@@ -447,22 +592,22 @@
   ],
   "lodging": [
     {
-      "id": "hotel-ejemplo",
-      "name": "Hotel Ejemplo Baixa",
-      "address": "Rua Augusta 1, 1100-048 Lisboa, Portugal",
-      "lat": 38.71,
-      "lng": -9.1366,
-      "country": "PT",
-      "check_in": "2027-03-10",
-      "check_out": "2027-03-11",
-      "nights": 1,
+      "id": "hotel-ej",
+      "name": "Hotel Ejemplo Euston",
+      "address": "Upper Woburn Pl, London WC1H 0HY",
+      "lat": 51.5263,
+      "lng": -0.13,
+      "country": "GB",
+      "check_in": "2027-03-08",
+      "check_out": "2027-03-10",
+      "nights": 2,
       "paid": true,
       "travelers": [
         "ana",
         "luis"
       ],
       "notes": "Ejemplo",
-      "maps_url": "https://www.google.com/maps/search/?api=1&query=38.71,-9.1366",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=51.5263,-0.13",
       "booking": {
         "confirmed": true,
         "confirmation_code": null,
@@ -474,9 +619,9 @@
     {
       "id": "2f06e203-756e-523f-a83c-13b7177856eb",
       "title": "Hacer check-in online",
-      "trigger_utc": "2027-03-09T08:00:00Z",
+      "trigger_utc": "2027-03-07T09:00:00Z",
       "timezone": "Europe/Madrid",
-      "event_id": "2cbbaab6-ba09-52fd-819f-380f37c75cfa",
+      "event_id": "7e009c69-455d-5117-9d8a-b7c75f9c72e0",
       "message": "Ejemplo de recordatorio.",
       "done": false
     }
@@ -485,7 +630,7 @@
     {
       "id": "a27b02af-1915-5023-a728-bacfa9b1275e",
       "title": "Antes de salir",
-      "event_id": "2cbbaab6-ba09-52fd-819f-380f37c75cfa",
+      "event_id": "7e009c69-455d-5117-9d8a-b7c75f9c72e0",
       "items": [
         {
           "id": "c6e2c4be-1e32-5402-8f63-b6d3532fdef4",
@@ -497,6 +642,12 @@
           "id": "f823f5d4-286e-53e0-9106-11abea865668",
           "text": "Cargador",
           "done": true,
+          "category": "electronica"
+        },
+        {
+          "id": "28f2ddcd-49fd-59f1-a1ba-704729d1a793",
+          "text": "Adaptador tipo G",
+          "done": false,
           "category": "electronica"
         }
       ]
