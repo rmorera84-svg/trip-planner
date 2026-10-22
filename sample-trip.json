@@ -1,0 +1,656 @@
+{
+  "schema_version": "12.0",
+  "trip": {
+    "id": "ejemplo",
+    "name": "Viaje de ejemplo",
+    "start_date": "2027-03-08",
+    "end_date": "2027-03-10",
+    "source_file": "sample"
+  },
+  "travelers": [
+    {
+      "id": "ana",
+      "name": "Ana",
+      "device": "ios"
+    },
+    {
+      "id": "luis",
+      "name": "Luis",
+      "device": "android"
+    }
+  ],
+  "days": [
+    {
+      "date": "2027-03-08",
+      "area": "Madrid → Londres",
+      "summary": "Vuelo y llegada",
+      "travelers": [
+        "ana",
+        "luis"
+      ],
+      "events": [
+        {
+          "id": "7e009c69-455d-5117-9d8a-b7c75f9c72e0",
+          "type": "flight",
+          "title": "Vuelo XX0123 Madrid → Londres",
+          "description": "Vuelo de ejemplo (datos ficticios).",
+          "details": [],
+          "tips": [
+            "Llegar 2 h antes"
+          ],
+          "cost": null,
+          "booking": {
+            "required": true,
+            "confirmed": true,
+            "confirmation_code": "ABC123",
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/Madrid",
+          "start_utc": "2027-03-08T12:25:00Z",
+          "end_utc": "2027-03-08T14:55:00Z",
+          "location": {
+            "name": "Madrid-Barajas T4S",
+            "lat": 40.4999,
+            "lng": -3.5933,
+            "country": "ES",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=40.4999,-3.5933"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null,
+            "flight": {
+              "provider": "aerodatabox",
+              "web_links": {
+                "flightradar24": "https://www.flightradar24.com/data/flights/xx123",
+                "flightaware": "https://www.flightaware.com/live/flight/XX123"
+              }
+            }
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ],
+          "flight": {
+            "number": "XX0123",
+            "iata": "XX123",
+            "airline": "Aerolínea Ejemplo",
+            "date": "2027-03-08",
+            "dep_iata": "MAD",
+            "arr_iata": "LHR",
+            "dep_terminal": "4S",
+            "arr_terminal": "5"
+          },
+          "end_timezone": "Europe/London"
+        },
+        {
+          "id": "92984703-ee50-577c-83a9-89c55db5087c",
+          "type": "lodging",
+          "title": "Check-in Hotel Ejemplo Euston",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/London",
+          "start_utc": "2027-03-08T17:00:00Z",
+          "end_utc": null,
+          "location": {
+            "name": "Hotel Ejemplo, Euston",
+            "lat": 51.5263,
+            "lng": -0.13,
+            "country": "GB",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=51.5263,-0.13"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ],
+          "lodging_id": "hotel-ej"
+        }
+      ]
+    },
+    {
+      "date": "2027-03-09",
+      "area": "Londres",
+      "summary": "Westminster y el río",
+      "travelers": [
+        "ana",
+        "luis"
+      ],
+      "events": [
+        {
+          "id": "2cbbaab6-ba09-52fd-819f-380f37c75cfa",
+          "type": "transport",
+          "title": "Metro Euston → Westminster",
+          "description": "Victoria Line y Jubilee Line.",
+          "details": [],
+          "tips": [],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/London",
+          "start_utc": "2027-03-09T08:00:00Z",
+          "end_utc": "2027-03-09T08:30:00Z",
+          "location": {
+            "name": "Euston → Westminster",
+            "lat": 51.5282,
+            "lng": -0.1337,
+            "country": "GB",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=51.5282,-0.1337"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null,
+            "transit": {
+              "provider": "tfl",
+              "from": "940GZZLUEUS",
+              "to": "940GZZLUWSM",
+              "lines": [
+                "victoria",
+                "jubilee"
+              ]
+            }
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        },
+        {
+          "id": "b8cb324a-c596-578a-98a0-e86501586e0e",
+          "type": "sight",
+          "title": "Big Ben y Abadía de Westminster",
+          "description": "Exteriores.",
+          "details": [],
+          "tips": [
+            "Foto desde la mitad del puente"
+          ],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/London",
+          "start_utc": "2027-03-09T08:30:00Z",
+          "end_utc": "2027-03-09T10:15:00Z",
+          "location": {
+            "name": "Westminster Abbey / Big Ben",
+            "lat": 51.5,
+            "lng": -0.125,
+            "country": "GB",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=51.5,-0.125"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        },
+        {
+          "id": "8bf4fb96-567b-5dea-8763-837b52321a3f",
+          "type": "sight",
+          "title": "Cambio de Guardia",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/London",
+          "start_utc": "2027-03-09T11:00:00Z",
+          "end_utc": "2027-03-09T11:45:00Z",
+          "location": {
+            "name": "Buckingham Palace",
+            "lat": 51.5014,
+            "lng": -0.1419,
+            "country": "GB",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=51.5014,-0.1419"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        },
+        {
+          "id": "cdd05603-216e-5aee-84cb-be0a4caff64c",
+          "type": "transport",
+          "title": "Metro London Bridge → Piccadilly Circus",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/London",
+          "start_utc": "2027-03-09T14:15:00Z",
+          "end_utc": "2027-03-09T14:45:00Z",
+          "location": {
+            "name": "London Bridge",
+            "lat": 51.505,
+            "lng": -0.086,
+            "country": "GB",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=51.505,-0.086"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null,
+            "transit": {
+              "provider": "tfl",
+              "from": "940GZZLULNB",
+              "to": "940GZZLUPCC",
+              "lines": [
+                "jubilee",
+                "piccadilly"
+              ]
+            }
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        },
+        {
+          "id": "00b4b13e-e450-5689-bf10-4284d4e9d0ef",
+          "type": "food",
+          "title": "Cena en Chinatown",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": {
+            "min": 12,
+            "max": 15,
+            "currency": "GBP",
+            "per": "person"
+          },
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/London",
+          "start_utc": "2027-03-09T19:15:00Z",
+          "end_utc": null,
+          "location": {
+            "name": "Chinatown London",
+            "lat": 51.5113,
+            "lng": -0.131,
+            "country": "GB",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=51.5113,-0.131"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        },
+        {
+          "id": "d6863ac9-4599-5d40-af0f-0ecdba3cfee5",
+          "type": "food",
+          "title": "Plan B: pub en Covent Garden",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "alternative",
+          "timezone": "Europe/London",
+          "start_utc": "2027-03-09T19:15:00Z",
+          "end_utc": null,
+          "location": {
+            "name": "Covent Garden",
+            "lat": 51.5117,
+            "lng": -0.124,
+            "country": "GB",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=51.5117,-0.124"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2027-03-10",
+      "area": "Salzburgo",
+      "summary": "Road trip y mercado",
+      "travelers": [
+        "ana",
+        "luis"
+      ],
+      "warnings": [
+        "Ejemplo de advertencia del día"
+      ],
+      "events": [
+        {
+          "id": "55aa4988-95a1-58ff-9d3c-e258679bcb71",
+          "type": "transport",
+          "title": "Manejo hacia Salzburgo",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/Vienna",
+          "start_utc": "2027-03-10T08:00:00Z",
+          "end_utc": "2027-03-10T09:30:00Z",
+          "location": {
+            "name": "A8 → Salzburgo",
+            "lat": 47.798,
+            "lng": 13.042,
+            "country": "AT",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=47.798,13.042"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null,
+            "driving": {
+              "provider": "maps_link"
+            }
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        },
+        {
+          "id": "7a7396d5-9f06-56d9-893b-b188f897fe75",
+          "type": "sight",
+          "title": "Fortaleza Hohensalzburg",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": null,
+          "booking": {
+            "required": null,
+            "confirmed": null,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/Vienna",
+          "start_utc": "2027-03-10T10:00:00Z",
+          "end_utc": "2027-03-10T12:00:00Z",
+          "location": {
+            "name": "Festung Hohensalzburg",
+            "lat": 47.795,
+            "lng": 13.0477,
+            "country": "AT",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=47.795,13.0477"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        },
+        {
+          "id": "0582af75-7bea-595f-8379-996ec75edce0",
+          "type": "food",
+          "title": "Almuerzo en Bärenwirt",
+          "description": "",
+          "details": [],
+          "tips": [],
+          "cost": null,
+          "booking": {
+            "required": true,
+            "confirmed": false,
+            "confirmation_code": null,
+            "url": null
+          },
+          "status": "planned",
+          "timezone": "Europe/Vienna",
+          "start_utc": "2027-03-10T12:30:00Z",
+          "end_utc": "2027-03-10T13:45:00Z",
+          "location": {
+            "name": "Bärenwirt",
+            "lat": 47.808,
+            "lng": 13.035,
+            "country": "AT",
+            "coords_source": "manual_approx",
+            "maps_url": "https://www.google.com/maps/search/?api=1&query=47.808,13.035"
+          },
+          "live": {
+            "weather": {
+              "provider": "open-meteo"
+            },
+            "last_updated_utc": null,
+            "data": null
+          },
+          "version": 1,
+          "created_at": "2026-10-21T00:00:00Z",
+          "updated_at": "2026-10-21T00:00:00Z",
+          "updated_by": "ana",
+          "deleted": false,
+          "source": "plan",
+          "travelers": [
+            "ana",
+            "luis"
+          ]
+        }
+      ]
+    }
+  ],
+  "lodging": [
+    {
+      "id": "hotel-ej",
+      "name": "Hotel Ejemplo Euston",
+      "address": "Upper Woburn Pl, London WC1H 0HY",
+      "lat": 51.5263,
+      "lng": -0.13,
+      "country": "GB",
+      "check_in": "2027-03-08",
+      "check_out": "2027-03-10",
+      "nights": 2,
+      "paid": true,
+      "travelers": [
+        "ana",
+        "luis"
+      ],
+      "notes": "Ejemplo",
+      "maps_url": "https://www.google.com/maps/search/?api=1&query=51.5263,-0.13",
+      "booking": {
+        "confirmed": true,
+        "confirmation_code": null,
+        "url": null
+      }
+    }
+  ],
+  "reminders": [
+    {
+      "id": "2f06e203-756e-523f-a83c-13b7177856eb",
+      "title": "Hacer check-in online",
+      "trigger_utc": "2027-03-07T09:00:00Z",
+      "timezone": "Europe/Madrid",
+      "event_id": "7e009c69-455d-5117-9d8a-b7c75f9c72e0",
+      "message": "Ejemplo de recordatorio.",
+      "done": false
+    }
+  ],
+  "checklists": [
+    {
+      "id": "a27b02af-1915-5023-a728-bacfa9b1275e",
+      "title": "Antes de salir",
+      "event_id": "7e009c69-455d-5117-9d8a-b7c75f9c72e0",
+      "items": [
+        {
+          "id": "c6e2c4be-1e32-5402-8f63-b6d3532fdef4",
+          "text": "Pasaporte",
+          "done": false,
+          "category": "documentos"
+        },
+        {
+          "id": "f823f5d4-286e-53e0-9106-11abea865668",
+          "text": "Cargador",
+          "done": true,
+          "category": "electronica"
+        },
+        {
+          "id": "28f2ddcd-49fd-59f1-a1ba-704729d1a793",
+          "text": "Adaptador tipo G",
+          "done": false,
+          "category": "electronica"
+        }
+      ]
+    }
+  ]
+}

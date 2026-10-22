@@ -21,8 +21,8 @@ export default defineConfig({
         scope: BASE,
         display: 'standalone',
         orientation: 'portrait',
-        background_color: '#0f172a',
-        theme_color: '#0f172a',
+        background_color: '#0b1020',
+        theme_color: '#0b1020',
         icons: [
           { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png' },
           { src: 'icons/icon-512.png', sizes: '512x512', type: 'image/png' },
@@ -31,7 +31,13 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,png,svg,json,webmanifest}'],
-        navigateFallback: BASE + 'index.html'
+        navigateFallback: BASE + 'index.html',
+        // Guarda los mapas ya vistos para usarlos sin señal
+        runtimeCaching: [{
+          urlPattern: /^https:\/\/[abc]?\.?tile\.openstreetmap\.org\/.*/,
+          handler: 'CacheFirst',
+          options: { cacheName: 'osm-tiles', expiration: { maxEntries: 3000, maxAgeSeconds: 60 * 60 * 24 * 60 } }
+        }]
       }
     })
   ]
